@@ -1,0 +1,7 @@
+{
+  "name": "PIAVet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
