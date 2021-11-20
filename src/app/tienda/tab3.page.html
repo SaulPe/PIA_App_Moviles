@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menuPrincipal"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tienda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div align="center">
+    <ion-card color="blank">
+      <ion-card-header>
+        <ion-card-title>
+          Mascotas en adopcion
+        </ion-card-title>
+        <p>En City Veterany los animales son primero, por ello somos amantes de las mascotas y conocemos <br>el fuerte vínculo emocional que existe entre una mascota y su familia.
+<br>Todos los días, puedes adoptar una mascota en una tienda. Nuestros socios comunitarios, <br>diariamente ayudan a encontrar hogares para miles
+<br>de perros, gatos, conejos y otras mascotas todas las semanas.</p>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <ion-row>
+    <ion-col size="4" *ngFor="let mascota of mascotas">
+      <ion-card (click)="sonidoanimal(mascota)">
+        <div align="center">
+          <ion-card-title>
+            {{mascota.nombre}}
+          </ion-card-title>
+        </div>
+        <ion-card-content>
+          <ion-img [src]="mascota.img"></ion-img>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+
+  <div align="center">
+    <ion-card color="blank">
+      <ion-card-header>
+        <ion-card-title>
+          Compra de mascota
+        </ion-card-title>
+        <p>En veterinary city estamos comprometidos que nuestros clientes salen satisfechos de <br> servicios en linea como fisica en adquirir una mascota</p>
+      </ion-card-header>
+    </ion-card>
+  </div>
+  <br>    <br>    <br>
+  <ion-row>
+    <ion-col size="4" *ngFor="let mascota of tienda">
+      <ion-card (click)="sonidoanimal(mascota)">
+        <div align="center">
+          <ion-card-title>
+            {{mascota.nombre}}
+          </ion-card-title>
+        </div>
+        <ion-card-content>
+          <ion-img [src]="mascota.img"></ion-img>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

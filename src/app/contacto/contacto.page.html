@@ -1,0 +1,53 @@
+<ion-content class="background-image" no-scroll padding>
+</ion-content>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menuPrincipal"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding ion-text-center">
+  <form>
+  <!--
+  <form (ngSubmit)="onCita()" #formNew="ngForm">
+  -->
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-label position="stacked" class="ion-text-wrap">Nombre del cliente:</ion-label>
+              <ion-input placeholder="Nombre del cliente"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" class="ion-text-wrap">Tienes dudas, ¡Describenos que dudas tiene!</ion-label>
+              <ion-textarea placeholder="Descripción del animal relacionado al servicio"></ion-textarea>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" class="ion-text-wrap">Cellphone</ion-label>
+              <ion-textarea placeholder="Numero a 10 Digitos"></ion-textarea>
+            </ion-item>
+            <ion-item>
+              <ion-label position="center" class="ion-text-wrap">Para mas informacion: Veterinariafcfm@gmail.com</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button
+          (click)="enviarCita()"
+            color="primary">
+            <!--
+            type="submit"
+            [disabled]="!formNew.valid">
+            -->
+            Enviar Consulta
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menuPrincipal"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Consultas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding ion-text-center">
+  <ion-card>
+    <ion-slides pager="true">
+      <ion-slide *ngFor="let con of consulta">
+        <img [src]="con.img" width="15" height="15">
+      </ion-slide>
+    </ion-slides>
+    <ion-card-header>
+      <ion-card-title>
+        Vacunacion
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      La vacunancion que ofrecemos debe instaurarse de forma individualizada para cada
+      animal, en función de la edad, del estado sanitario, <p>del estado inmunitario, incluso del
+      hábito de vida del animal, esto sera <p>determiando por nuestro equipo medico veterinario
+      dentro de la consulta.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Consulta Clinica
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Nuestras consultas clinicas van desde un chequeo rapido hasta
+      tratamiento de animales enfermos <p>y control de enfermedades que limitan la producción.
+      Ademas de esto se cuenta con el chequeo<p> de la alimentacion del animal.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Esterilizacion
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        Si se deseas podemos llevar acabo el proceso de esterilizacion, <p>este se explicara dentro
+        de la consulta y varia dependiendo del animal
+    </ion-card-content>
+  </ion-card>
+  <form>
+  <!--
+  <form (ngSubmit)="onCita()" #formNew="ngForm">
+  -->
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Cliente:</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Selecciones de Consulta:</ion-label>
+                <ion-select>
+                  <ion-select-option>Vacunacion</ion-select-option>
+                  <ion-select-option>Consulta Clinica</ion-select-option>
+                  <ion-select-option>Esterilizacion</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Descripción de su mascota:</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Horario deseado para el servicio:</ion-label>
+              <ion-datetime
+              display-format="MMM DD YYYY, hh:mm A"
+              picker-format="YY MMM DD hh mm A"
+              monthShortNames="Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre">
+              <!--
+              required
+              name="horario">
+              -->
+              </ion-datetime>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="enviarConsulta()" color="primary">
+            <!--
+            type="submit"
+            [disabled]="!formNew.valid">
+            -->
+            Enviar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

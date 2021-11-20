@@ -1,0 +1,86 @@
+<body>Foto</body>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menuPrincipal"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Estética</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding ion-text-center">
+  <!--
+  <ion-virtual-scroll [items]="estetica" approxItemHeight="320px">
+    <ion-item *virtualItem="let est;">
+      <img [src]="est.img">
+    </ion-item>
+  </ion-virtual-scroll>
+  -->
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let est of estetica">
+      <img [src]="est.img" width="15" height="15">
+    </ion-slide>
+  </ion-slides>
+
+  <!--
+  <ion-card *ngFor="let est of estetica">
+    <ion-card-title>{{est.nombre}}</ion-card-title>
+    <ion-card-content>{{est.desc}}</ion-card-content>
+  </ion-card>
+  -->
+
+  <form>
+  <!--
+  <form (ngSubmit)="onCita()" #formNew="ngForm">
+  -->
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-label position="stacked" class="ion-text-wrap">Nombre del cliente:</ion-label>
+              <ion-input placeholder="Nombre del cliente"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" class="ion-text-wrap">Tipo de servicio requerido:</ion-label>
+                <ion-select placeholder="Seleccione una opcion..." interface="action-sheet" cancelText="Cancelar">
+                  <ion-select-option *ngFor="let est of estetica">{{est.nombre}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" class="ion-text-wrap">Descripción del animal relacionado al servicio:</ion-label>
+              <ion-textarea placeholder="Descripción del animal relacionado al servicio"></ion-textarea>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked" class="ion-text-wrap">Horario deseado para el servicio:</ion-label>
+              <ion-datetime
+              display-format="MMM DD YYYY, hh:mm A"
+              picker-format="YY MMM DD hh mm A"
+              monthShortNames="Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre"
+              cancelText="Cancelar"
+              doneText="Aceptar"
+              placeholder="Seleccione una fecha...">
+              <!--
+              required
+              name="horario">
+              -->
+              </ion-datetime>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button
+          (click)="enviarCita()"
+            color="primary">
+            <!--
+            type="submit"
+            [disabled]="!formNew.valid">
+            -->
+            Enviar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

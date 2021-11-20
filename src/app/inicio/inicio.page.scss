@@ -1,0 +1,42 @@
+page-inicio{
+    h2{
+        color:aqua;
+    }
+}
+div.scrollmenu {
+    background-image: url("https://irp-cdn.multiscreensite.com/b7dc6c81/MOBILE/jpg/230838-america-veterinaria-banner-2.jpg");
+    //background-color: #333;
+    height: 471px;
+    overflow: auto;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  div.scrollmenu a:hover {
+    background-image: #777;
+  }
+  ion-header{
+      position: fixed;
+  }
+  ion-title{
+      text-align: left;
+      text-indent: 740px;
+  }
+  div{
+      text-align: right;
+      color: black;
+  }
+  div.scrollmenu2 {
+    background-image: url("https://petforever.mx/wp-content/uploads/2017/10/cachorro-estetica.jpg");
+    background-repeat: no-repeat;
+    //background-color: #333;
+    height: 1000p
+  }
